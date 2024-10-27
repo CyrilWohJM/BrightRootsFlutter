@@ -23,11 +23,15 @@ class LearnerWalkThrough extends StatefulWidget {
 class _LearnerWalkThroughState extends State<LearnerWalkThrough> {
   int currentIndexPage = 0;
   int? pageLength;
-  var titles = ['Welcome', 'Select Course', 'Learn Topics'];
+  var titles = [
+    'Welcome to BrightRoots',
+    'Select Subject Module(s)',
+    'Initiate Learning Journey'
+  ];
   var subTitles = [
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.This is simply text ",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.This is simply text  ",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.This is simply text"
+    "Unlock Knowledge, Anytime, Anywhere – Your Learning Journey Begins Here!",
+    "Access Module(s) based on Subjects from Various Exam Board",
+    "Get Started on the Path to Knowledge – Learning Made Simple and Accessible!"
   ];
 
   List<LearnerWalk>? mList1;
@@ -68,7 +72,9 @@ class _LearnerWalkThroughState extends State<LearnerWalkThrough> {
                 child: DotsIndicator(
                   dotsCount: 3,
                   position: currentIndexPage,
-                  decorator: DotsDecorator(color: learner_greyColor, activeColor: learner_colorPrimary),
+                  decorator: DotsDecorator(
+                      color: learner_greyColor,
+                      activeColor: learner_colorPrimary),
                 ),
               ),
             ),
@@ -81,11 +87,14 @@ class _LearnerWalkThroughState extends State<LearnerWalkThrough> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(titles[currentIndexPage], style: boldTextStyle(size: 20, color: learner_textColorPrimary)),
+                    Text(titles[currentIndexPage],
+                        style: boldTextStyle(
+                            size: 20, color: learner_textColorPrimary)),
                     SizedBox(height: 10),
                     Text(
                       subTitles[currentIndexPage],
-                      style: primaryTextStyle(size: 18, color: learner_textColorSecondary),
+                      style: primaryTextStyle(
+                          size: 18, color: learner_textColorSecondary),
                       textAlign: TextAlign.center,
                     ).center(),
                     SizedBox(height: 50),
@@ -105,7 +114,9 @@ class _LearnerWalkThroughState extends State<LearnerWalkThrough> {
                     16.height,
                     Text(
                       "Login",
-                      style: primaryTextStyle(decoration: TextDecoration.underline, color: learner_greyColor),
+                      style: primaryTextStyle(
+                          decoration: TextDecoration.underline,
+                          color: learner_greyColor),
                     ).onTap(
                       () {
                         LearnerLogin().launch(context);
@@ -151,14 +162,18 @@ class WalkThrough extends StatelessWidget {
       child: SizedBox(
         child: Stack(
           children: <Widget>[
-            Image.asset(learner_walk_BackImg, fit: BoxFit.fill, width: MediaQuery.of(context).size.width, height: (MediaQuery.of(context).size.height) * 0.4),
+            Image.asset(learner_walk_BackImg,
+                fit: BoxFit.fill,
+                width: MediaQuery.of(context).size.width,
+                height: (MediaQuery.of(context).size.height) * 0.4),
             SafeArea(
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: (MediaQuery.of(context).size.height) * 0.4,
                 alignment: Alignment.center,
                 child: CachedNetworkImage(
-                  placeholder: placeholderWidgetFn() as Widget Function(BuildContext, String)?,
+                  placeholder: placeholderWidgetFn() as Widget Function(
+                      BuildContext, String)?,
                   imageUrl: textContent,
                   width: 300,
                   height: (MediaQuery.of(context).size.height) * 0.3,

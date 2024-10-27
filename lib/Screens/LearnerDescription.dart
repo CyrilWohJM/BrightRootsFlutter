@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:learner_prokit/model/LearnerModels.dart';
@@ -35,15 +37,19 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
             Column(
               children: [
                 Container(
-                  height: 400,
+                  height: 440,
                   margin: EdgeInsets.fromLTRB(16, 30, 16, 10),
-                  decoration: boxDecoration(showShadow: true, radius: 16, bgColor: context.cardColor),
+                  decoration: boxDecoration(
+                      showShadow: true, radius: 16, bgColor: context.cardColor),
                   child: Column(
                     children: <Widget>[
                       ClipRRect(
-                        borderRadius: BorderRadius.only(topRight: Radius.circular(16), topLeft: Radius.circular(16)),
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(16),
+                            topLeft: Radius.circular(16)),
                         child: CachedNetworkImage(
-                          placeholder: placeholderWidgetFn() as Widget Function(BuildContext, String)?,
+                          placeholder: placeholderWidgetFn() as Widget Function(
+                              BuildContext, String)?,
                           imageUrl: learner_climb,
                           fit: BoxFit.cover,
                           height: MediaQuery.of(context).size.height * 0.3,
@@ -51,10 +57,14 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
                         ),
                       ),
                       16.height,
-                      Text(learner_lbl_project_management, style: boldTextStyle()),
+                      Text(learner_lbl_project_management,
+                          style: boldTextStyle()),
                       8.height,
                       Container(
-                        decoration: boxDecoration(bgColor: learner_green, radius: 8, showShadow: false),
+                        decoration: boxDecoration(
+                            bgColor: learner_green,
+                            radius: 8,
+                            showShadow: false),
                         padding: EdgeInsets.fromLTRB(16, 4, 16, 4),
                         child: Text(learner_lbl_30_80, style: boldTextStyle()),
                       ),
@@ -62,21 +72,27 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          LearnerOptionDescription(learner_lbl_1_6k, learner_lbl_students),
-                          LearnerOptionDescription(learner_lbl_5_0, learner_lbl_rating),
-                          LearnerOptionDescription(learner_lbl_37, learner_lbl_lectures),
+                          LearnerOptionDescription(
+                              learner_lbl_1_6k, learner_lbl_students),
+                          LearnerOptionDescription(
+                              learner_lbl_5_0, learner_lbl_rating),
+                          LearnerOptionDescription(
+                              learner_lbl_37, learner_lbl_lectures),
                         ],
-                      )
+                      ),
+                      20.height,
                     ],
                   ),
                 ),
                 8.height,
                 Column(
                   children: [
-                    Icon(Icons.keyboard_arrow_up, color: learner_textColorSecondary),
+                    Icon(Icons.keyboard_arrow_up,
+                        color: learner_textColorSecondary),
                     Text(
                       learner_lbl_swipe_up_to_show_course_contents,
-                      style: primaryTextStyle(color: learner_textColorSecondary),
+                      style:
+                          primaryTextStyle(color: learner_textColorSecondary),
                     )
                   ],
                 )
@@ -87,15 +103,19 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
                 Container(
                   alignment: Alignment.topRight,
                   margin: EdgeInsets.all(16.0),
-                  child: Icon(Icons.close, color: learner_textColorSecondary, size: 20),
+                  child: Icon(Icons.close,
+                      color: learner_textColorSecondary, size: 20),
                 ),
-                Text(learner_lbl_project_management, style: boldTextStyle(size: 20)),
+                Text(learner_lbl_project_management,
+                    style: boldTextStyle(size: 20)),
                 8.height,
                 Container(
-                  decoration: boxDecoration(bgColor: learner_green, radius: 8, showShadow: false),
+                  decoration: boxDecoration(
+                      bgColor: learner_green, radius: 8, showShadow: false),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(10, 4, 10, 4),
-                    child: Text(learner_lbl_30_80, style: boldTextStyle(color: learner_white)),
+                    child: Text(learner_lbl_30_80,
+                        style: boldTextStyle(color: learner_white)),
                   ),
                 ),
                 16.height,
@@ -107,11 +127,13 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
                       Row(
                         children: <Widget>[
                           CircleAvatar(
-                            backgroundImage: CachedNetworkImageProvider(learner_ic_Profile),
+                            backgroundImage:
+                                CachedNetworkImageProvider(learner_ic_Profile),
                             radius: MediaQuery.of(context).size.height * 0.025,
                           ),
                           16.width,
-                          Text(learner_lbl_hannah_tran, style: boldTextStyle(color: learner_colorPrimary))
+                          Text(learner_lbl_hannah_tran,
+                              style: boldTextStyle(color: learner_colorPrimary))
                         ],
                       ),
                       RichText(
@@ -119,11 +141,16 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
                           style: Theme.of(context).textTheme.bodyMedium,
                           children: [
                             WidgetSpan(
-                              child: Icon(Icons.star, color: learner_yellow, size: 16).paddingSymmetric(horizontal: 8),
+                              child: Icon(Icons.star,
+                                      color: learner_yellow, size: 16)
+                                  .paddingSymmetric(horizontal: 8),
                             ),
                             TextSpan(
                               text: learner_lbl_5_0,
-                              style: TextStyle(fontSize: textSizeMedium, color: learner_yellow, fontFamily: fontMedium),
+                              style: TextStyle(
+                                  fontSize: textSizeMedium,
+                                  color: learner_yellow,
+                                  fontFamily: fontMedium),
                             ),
                           ],
                         ),
@@ -132,14 +159,43 @@ class _LearnerDescriptionState extends State<LearnerDescription> {
                   ),
                 ),
                 16.height,
-                ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  itemCount: mList.length,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return LearnerQuestion(mList[index], index);
-                  },
-                ),
+                Row(
+                  children: <Widget>[
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Introduction", style: boldTextStyle()),
+                        Text("About this course and overview",
+                            style: primaryTextStyle()),
+                        Text("Video",
+                            style: secondaryTextStyle(
+                                color: learner_colorPrimary)),
+                      ],
+                    ).expand()
+                  ],
+                ).paddingLeft(20),
+                16.height,
+                Row(
+                  children: <Widget>[
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Simple Notes", style: boldTextStyle()),
+                        Text("Basics and introduction",
+                            style: primaryTextStyle()),
+                        Text("Click here to download PDF",
+                            style: secondaryTextStyle(
+                                color: learner_colorPrimary)),
+                        Image.asset(
+                          set_probability_note,
+                          width: MediaQuery.of(context).size.width - 100,
+                        )
+                            .cornerRadiusWithClipRRect(25)
+                            .paddingOnly(left: 16, top: 16),
+                      ],
+                    ).expand()
+                  ],
+                ).paddingLeft(20)
               ],
             )
           ],
@@ -173,7 +229,8 @@ class LearnerQuestion extends StatelessWidget {
             children: [
               Text(model.name, style: boldTextStyle()),
               Text(model.subtitle, style: primaryTextStyle()),
-              Text(model.type, style: secondaryTextStyle(color: learner_colorPrimary)),
+              Text(model.type,
+                  style: secondaryTextStyle(color: learner_colorPrimary)),
             ],
           ).expand()
         ],

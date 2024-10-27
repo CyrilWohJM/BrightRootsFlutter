@@ -68,21 +68,27 @@ class _LearnerChartState extends State<LearnerChart> {
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   learner_lbl_All,
-                                  style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontFamily: fontBold),
                                 ),
-                              ).paddingOnly(left: 8, right: 8),
+                              ).paddingOnly(
+                                left: 8,
+                                right: 8,
+                              ),
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   learner_lbl_Ongoing,
-                                  style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontFamily: fontBold),
                                 ),
                               ).paddingOnly(right: 8),
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   learner_lbl_Completed,
-                                  style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontFamily: fontBold),
                                 ),
                               ).paddingOnly(right: 8)
                             ],
@@ -102,9 +108,11 @@ class _LearnerChartState extends State<LearnerChart> {
                   padding: EdgeInsets.only(bottom: 50),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return LearnerCourses(mList1[index], index, LearnerDescription.tag);
+                    return LearnerCourses(
+                        mList1[index], index, LearnerDescription.tag);
                   },
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2),
                 ),
                 GridView.builder(
                   scrollDirection: Axis.vertical,
@@ -112,7 +120,8 @@ class _LearnerChartState extends State<LearnerChart> {
                   padding: EdgeInsets.only(bottom: 50),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return LearnerCourses(mList1[index], index, LearnerModrenMedicine.tag);
+                    return LearnerCourses(
+                        mList1[index], index, LearnerModrenMedicine.tag);
                   },
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -124,7 +133,8 @@ class _LearnerChartState extends State<LearnerChart> {
                   padding: EdgeInsets.only(bottom: 50),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return LearnerCourses(mList1[index], index, LearnerDescription.tag);
+                    return LearnerCourses(
+                        mList1[index], index, LearnerDescription.tag);
                   },
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -174,7 +184,12 @@ class LearnerCourses extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
-              text(model.name, textColor: learner_textColorPrimary, fontSize: textSizeMedium, fontFamily: fontMedium, maxLine: 2).paddingOnly(left: 16, right: 16, top: 16),
+              text(model.name,
+                      textColor: learner_textColorPrimary,
+                      fontSize: textSizeMedium,
+                      fontFamily: fontMedium,
+                      maxLine: 2)
+                  .paddingOnly(left: 16, right: 16, top: 16),
               Container(
                 child: LinearProgressIndicator(
                   value: 0.5,
@@ -186,7 +201,10 @@ class LearnerCourses extends StatelessWidget {
           )
         ],
       ),
-    ).cornerRadiusWithClipRRect(10.0).paddingOnly(top: 16, left: 16, right: 16).onTap(
+    )
+        .cornerRadiusWithClipRRect(10.0)
+        .paddingOnly(top: 16, left: 16, right: 16)
+        .onTap(
       () {
         LearnerDescription().launch(context);
       },

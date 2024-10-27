@@ -1,5 +1,3 @@
-
-
 import 'package:learner_prokit/model/LearnerModels.dart';
 import 'package:learner_prokit/utils/LearnerColors.dart';
 import 'package:learner_prokit/utils/LearnerImages.dart';
@@ -28,44 +26,14 @@ List<LearnerCategoryModel> learnerGetCategories() {
 
   var category = LearnerCategoryModel();
   category.img = learner_ic_bag;
-  category.name = "Business";
+  category.name = "Maths";
 
   var category2 = LearnerCategoryModel();
   category2.img = learner_ic_pencil_scale;
-  category2.name = "Design";
-
-  var category3 = LearnerCategoryModel();
-  category3.img = learner_ic_crome;
-  category3.name = "Economy";
-
-  var category4 = LearnerCategoryModel();
-  category4.img = learner_ic_telecope;
-  category4.name = "Research";
-
-  var category5 = LearnerCategoryModel();
-  category5.img = learner_ic_medal;
-  category5.name = "Polytics";
-
-  var category6 = LearnerCategoryModel();
-  category6.img = learner_ic_crown;
-  category6.name = "Awards";
-
-  var category7 = LearnerCategoryModel();
-  category7.img = learner_ic_flag;
-  category7.name = "Sports";
-
-  var category8 = LearnerCategoryModel();
-  category8.img = learner_ic_cup;
-  category8.name = "Medals";
+  category2.name = "Science";
 
   list.add(category);
   list.add(category2);
-  list.add(category3);
-  list.add(category4);
-  list.add(category5);
-  list.add(category6);
-  list.add(category7);
-  list.add(category8);
 
   return list;
 }
@@ -74,9 +42,9 @@ List<LearnerFeaturedModel> learnerGetFavourites() {
   List<LearnerFeaturedModel> list = [];
   LearnerFeaturedModel featured = LearnerFeaturedModel();
   featured.img = learner_walk_1;
-  featured.name = "Business Management";
+  featured.name = "Set Operation & Probability";
   featured.price = "\$19.99";
-  featured.type = "Management";
+  featured.type = "Maths";
 
   LearnerFeaturedModel featured2 = LearnerFeaturedModel();
   featured2.img = learner_walk_2;
@@ -111,11 +79,6 @@ List<LearnerFeaturedModel> learnerGetFavourites() {
   featured4.type = "Management";
 
   list.add(featured);
-  list.add(featured2);
-  list.add(featured5);
-  list.add(featured6);
-  list.add(featured3);
-  list.add(featured4);
 
   return list;
 }
@@ -126,26 +89,6 @@ List<LearnerPeopleModel> learnerGetRecommended() {
   var people = LearnerPeopleModel();
   people.img = learner_walk_1;
   list.add(people);
-
-  var people2 = LearnerPeopleModel();
-  people2.img = learner_ic_Cake;
-  list.add(people2);
-
-  var people3 = LearnerPeopleModel();
-  people3.img = learner_green_image;
-  list.add(people3);
-
-  var people4 = LearnerPeopleModel();
-  people4.img = learner_climb;
-  list.add(people4);
-
-  var people5 = LearnerPeopleModel();
-  people5.img = learner_walk_3;
-  list.add(people5);
-
-  var people6 = LearnerPeopleModel();
-  people6.img = learner_ic_Profile;
-  list.add(people6);
 
   return list;
 }
@@ -293,7 +236,7 @@ List<LearnerCoursesModel> learnerGetCourses() {
   List<LearnerCoursesModel> list = [];
   LearnerCoursesModel courses = LearnerCoursesModel();
   courses.img = learner_walk_1;
-  courses.name = "Business Management";
+  courses.name = "Set Operation & Probability";
 
   LearnerCoursesModel courses2 = LearnerCoursesModel();
   courses2.img = learner_walk_2;
@@ -316,11 +259,6 @@ List<LearnerCoursesModel> learnerGetCourses() {
   courses6.name = "Project Management";
 
   list.add(courses);
-  list.add(courses2);
-  list.add(courses3);
-  list.add(courses4);
-  list.add(courses5);
-  list.add(courses6);
   return list;
 }
 
@@ -333,7 +271,7 @@ List<LearnerContentModel> learnerGetContents() {
   list.add(content);
 
   var content2 = LearnerContentModel();
-  content2.name = "What is management?";
+  content2.name = "Simple Notes";
   content2.subtitle = "Basics and introduction";
   content2.type = "Article";
   list.add(content2);
@@ -407,8 +345,10 @@ List<ChatModel> getMessages() {
   List<ChatModel> list = [];
 
   ChatModel model1 = ChatModel('1', 'Hello Nimisha');
-  ChatModel model2 = ChatModel('1', 'I am Revision Bot, here to help you study your ongoing courses.');
-  ChatModel model3 = ChatModel('1', 'select a course to begin Business Management Cloud Computing Moden Medicine');
+  ChatModel model2 = ChatModel(
+      '1', 'I am Revision Bot, here to help you study your ongoing courses.');
+  ChatModel model3 = ChatModel('1',
+      'select a course to begin Set Operation & Probability Cloud Computing Moden Medicine');
   ChatModel model4 = ChatModel('2', 'Modren Medicine');
 
   list.add(model1);
@@ -421,9 +361,29 @@ List<ChatModel> getMessages() {
 
 List<LanguageDataModel> languageList() {
   return [
-    LanguageDataModel(id: 1, name: 'English', languageCode: 'en', fullLanguageCode: 'en-US', flag: 'images/flag/ic_us.png'),
-    LanguageDataModel(id: 2, name: 'Hindi', languageCode: 'hi', fullLanguageCode: 'hi-IN', flag: 'images/flag/ic_hi.png'),
-    LanguageDataModel(id: 3, name: 'Arabic', languageCode: 'ar', fullLanguageCode: 'ar-AR', flag: 'images/flag/ic_ar.png'),
-    LanguageDataModel(id: 4, name: 'French', languageCode: 'fr', fullLanguageCode: 'fr-FR', flag: 'images/flag/ic_fr.png'),
+    LanguageDataModel(
+        id: 1,
+        name: 'English',
+        languageCode: 'en',
+        fullLanguageCode: 'en-US',
+        flag: 'images/flag/ic_us.png'),
+    LanguageDataModel(
+        id: 2,
+        name: 'Hindi',
+        languageCode: 'hi',
+        fullLanguageCode: 'hi-IN',
+        flag: 'images/flag/ic_hi.png'),
+    LanguageDataModel(
+        id: 3,
+        name: 'Arabic',
+        languageCode: 'ar',
+        fullLanguageCode: 'ar-AR',
+        flag: 'images/flag/ic_ar.png'),
+    LanguageDataModel(
+        id: 4,
+        name: 'French',
+        languageCode: 'fr',
+        fullLanguageCode: 'fr-FR',
+        flag: 'images/flag/ic_fr.png'),
   ];
 }
