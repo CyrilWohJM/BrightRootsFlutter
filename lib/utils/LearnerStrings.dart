@@ -49,7 +49,7 @@ const learner_lbl_All = "All";
 const learner_lbl_Ongoing = "Ongoing";
 const learner_lbl_Completed = "Completed";
 const learner_lbl_project_management = "Set Operation & Probability";
-const learner_lbl_30_80 = "\$30.80";
+const learner_lbl_30_80 = "Free";
 const learner_lbl_1_6k = "1.6K";
 const learner_lbl_students = "Students";
 const learner_lbl_rating = "Rating";
@@ -58,7 +58,7 @@ const learner_lbl_lectures = "Lectures";
 const learner_lbl_5_0 = "5.0";
 const learner_lbl_swipe_up_to_show_course_contents =
     "Swipe up to show course contents";
-const learner_lbl_hannah_tran = "Hannah Tran";
+const learner_lbl_hannah_tran = "Dynamic Duo";
 
 const learner_lbl_modren_medicine = "Modren Medicine";
 const learner_lbl_Louisa_macGee = "Louisa macGee";

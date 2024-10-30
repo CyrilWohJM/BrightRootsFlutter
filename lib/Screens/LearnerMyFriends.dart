@@ -46,13 +46,17 @@ class _LearnerMyFriendsState extends State<LearnerMyFriends> {
                         alignment: Alignment.centerLeft,
                         width: MediaQuery.of(context).size.width,
                         child: IconButton(
-                          icon: Icon(Icons.arrow_back, color: learner_colorPrimary),
+                          icon: Icon(Icons.arrow_back,
+                              color: learner_colorPrimary),
                           onPressed: () {
                             finish(context);
                           },
                         ),
                       ),
-                      text(learner_lbl_My_Friends, fontSize: textSizeLarge, fontFamily: fontBold, textColor: learner_textColorPrimary),
+                      text(learner_lbl_My_Friends,
+                          fontSize: textSizeLarge,
+                          fontFamily: fontBold,
+                          textColor: learner_textColorPrimary),
                       8.height,
                       Container(
                         width: MediaQuery.of(context).size.width / 1.3,
@@ -69,20 +73,29 @@ class _LearnerMyFriendsState extends State<LearnerMyFriends> {
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 learner_lbl_Accepted,
-                                style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                style: TextStyle(
+                                    fontSize: 18.0, fontFamily: fontBold),
                               ),
                             ),
                             Container(
                               padding: EdgeInsets.all(12.0),
                               child: Row(
                                 children: <Widget>[
-                                  Text(learner_lbl_pending, style: TextStyle(fontSize: 18.0, fontFamily: fontBold)),
+                                  Text(learner_lbl_pending,
+                                      style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontFamily: fontBold)),
                                   Container(
                                     color: learner_colorPrimary,
                                     height: 25,
                                     width: 40,
-                                    child: text("80+", textColor: learner_white, fontSize: textSizeSMedium).paddingOnly(top: 2, left: 8, right: 4),
-                                  ).cornerRadiusWithClipRRect(15).paddingOnly(left: 8)
+                                    child: text("1",
+                                            textColor: learner_white,
+                                            fontSize: textSizeSMedium)
+                                        .paddingOnly(top: 2, left: 8, right: 4),
+                                  )
+                                      .cornerRadiusWithClipRRect(15)
+                                      .paddingOnly(left: 8)
                                 ],
                               ),
                             )
@@ -152,7 +165,9 @@ class LearnerPending extends StatelessWidget {
                       height: 15,
                       width: 15,
                       decoration: BoxDecoration(
-                        color: model.isOnline ? learner_green : learner_greyColor.withOpacity(1.0),
+                        color: model.isOnline
+                            ? learner_green
+                            : learner_greyColor.withOpacity(1.0),
                         shape: BoxShape.circle,
                         border: Border.all(color: learner_white, width: 1.5),
                       ),
@@ -165,9 +180,13 @@ class LearnerPending extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(model.name, style: boldTextStyle(color: learner_textColorPrimary)),
+                      Text(model.name,
+                          style:
+                              boldTextStyle(color: learner_textColorPrimary)),
                       4.width,
-                      Text(model.email, style: secondaryTextStyle(color: learner_textColorSecondary)),
+                      Text(model.email,
+                          style: secondaryTextStyle(
+                              color: learner_textColorSecondary)),
                     ],
                   ).paddingOnly(right: 16),
                 ),
@@ -182,13 +201,17 @@ class LearnerPending extends StatelessWidget {
                         boxShape: BoxShape.circle,
                         backgroundColor: context.cardColor,
                       ),
-                      child: Icon(Icons.close, size: 24, color: appStore.isDarkModeOn ? white : black),
+                      child: Icon(Icons.close,
+                          size: 24,
+                          color: appStore.isDarkModeOn ? white : black),
                     ),
                     /*    Image.asset(learner_ic_uncheck, height: 40, width: 40).paddingOnly(right: 16).onTap(() {
                       log("uncheck");
                     }),*/
                     16.width,
-                    Image.asset(learner_ic_check, height: 40, width: 40).paddingOnly(right: 8).onTap(() {
+                    Image.asset(learner_ic_check, height: 40, width: 40)
+                        .paddingOnly(right: 8)
+                        .onTap(() {
                       LearnerFriendDetail().launch(context);
                     }),
                   ],
@@ -231,7 +254,12 @@ class LearnerAccepted extends StatelessWidget {
                   Container(
                     height: 15,
                     width: 15,
-                    decoration: BoxDecoration(color: model.isOnline ? learner_green : learner_greyColor.withOpacity(1.0), shape: BoxShape.circle, border: Border.all(color: learner_white, width: 1.5)),
+                    decoration: BoxDecoration(
+                        color: model.isOnline
+                            ? learner_green
+                            : learner_greyColor.withOpacity(1.0),
+                        shape: BoxShape.circle,
+                        border: Border.all(color: learner_white, width: 1.5)),
                   ).cornerRadiusWithClipRRect(7).paddingOnly(top: 4, right: 2)
                 ],
               ),
@@ -239,9 +267,12 @@ class LearnerAccepted extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(model.name, style: boldTextStyle(color: learner_textColorPrimary)),
+                  Text(model.name,
+                      style: boldTextStyle(color: learner_textColorPrimary)),
                   4.width,
-                  Text(model.email, style: secondaryTextStyle(color: learner_textColorSecondary)),
+                  Text(model.email,
+                      style: secondaryTextStyle(
+                          color: learner_textColorSecondary)),
                 ],
               )
             ],

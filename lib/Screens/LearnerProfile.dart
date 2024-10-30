@@ -32,8 +32,13 @@ class _LearnerProfileState extends State<LearnerProfile> {
                 child: Row(
                   children: <Widget>[
                     Container(
-                      decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: learner_white, width: 4)),
-                      child: CircleAvatar(backgroundImage: CachedNetworkImageProvider(learner_ic_Profile), radius: width / 8.5),
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: learner_white, width: 4)),
+                      child: CircleAvatar(
+                          backgroundImage:
+                              CachedNetworkImageProvider(learner_ic_Profile),
+                          radius: width / 8.5),
                     ),
                     SizedBox(
                       width: 20,
@@ -41,14 +46,19 @@ class _LearnerProfileState extends State<LearnerProfile> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        text("Nimasha Perara", fontFamily: fontSemibold, fontSize: textSizeLargeMedium, textColor: learner_textColorPrimary),
-                        text(learner_lbl_390_290_points, textColor: learner_textColorPrimary),
+                        text("Dynamic Duo",
+                            fontFamily: fontSemibold,
+                            fontSize: textSizeLargeMedium,
+                            textColor: learner_textColorPrimary),
+                        text(learner_lbl_390_290_points,
+                            textColor: learner_textColorPrimary),
                         SizedBox(
                           height: 8,
                         ),
                         Row(
                           children: <Widget>[
-                            learnerAward(learner_ic_medal, learner_colorPrimary),
+                            learnerAward(
+                                learner_ic_medal, learner_colorPrimary),
                             learnerAward(learner_ic_crown, learner_green),
                             learnerAward(learner_ic_cup, learner_light_pink),
                             learnerAward(learner_ic_flag, learner_orange_dark),
@@ -61,20 +71,29 @@ class _LearnerProfileState extends State<LearnerProfile> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 30, left: 16),
-                child: text(learner_lbl_general, fontFamily: fontBold, textAllCaps: true, textColor: learner_textColorPrimary),
+                child: text(learner_lbl_general,
+                    fontFamily: fontBold,
+                    textAllCaps: true,
+                    textColor: learner_textColorPrimary),
               ),
               8.height,
               Container(
-                decoration: boxDecoration(bgColor: context.cardColor, showShadow: true, radius: 0),
+                decoration: boxDecoration(
+                    bgColor: context.cardColor, showShadow: true, radius: 0),
                 child: Column(
                   children: <Widget>[
-                    learnerOption(learner_ic_heart, learner_lbl_favourite_courses).onTap(() {
+                    learnerOption(
+                            learner_ic_heart, learner_lbl_favourite_courses)
+                        .onTap(() {
                       LearnerFavourites().launch(context);
                     }),
-                    learnerOption(learner_ic_user, learner_lbl_my_friends).onTap(() {
+                    learnerOption(learner_ic_user, learner_lbl_my_friends)
+                        .onTap(() {
                       LearnerMyFriends().launch(context);
                     }),
-                    learnerOption(learner_ic_achievements, learner_lbl_achievements).onTap(() {
+                    learnerOption(
+                            learner_ic_achievements, learner_lbl_achievements)
+                        .onTap(() {
                       LearnerAchievements().launch(context);
                     }),
                   ],
@@ -82,15 +101,21 @@ class _LearnerProfileState extends State<LearnerProfile> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 25, left: 16),
-                child: text(learner_lbl_settings, fontFamily: fontBold, textAllCaps: true, textColor: learner_textColorPrimary),
+                child: text(learner_lbl_settings,
+                    fontFamily: fontBold,
+                    textAllCaps: true,
+                    textColor: learner_textColorPrimary),
               ),
               8.height,
               Container(
-                decoration: boxDecoration(bgColor: context.cardColor, showShadow: true, radius: 0),
+                decoration: boxDecoration(
+                    bgColor: context.cardColor, showShadow: true, radius: 0),
                 child: Column(
                   children: <Widget>[
-                    learnerOption(learner_ic_key, learner_lbl_edit_login_details),
-                    learnerOption(learner_ic_correct, learner_lbl_update_interests),
+                    learnerOption(
+                        learner_ic_key, learner_lbl_edit_login_details),
+                    learnerOption(
+                        learner_ic_correct, learner_lbl_update_interests),
                     learnerOption(learner_ic_block, learner_lbl_blocked_users),
                     Padding(
                       padding: EdgeInsets.fromLTRB(16, 10, 16, 8),
@@ -100,14 +125,22 @@ class _LearnerProfileState extends State<LearnerProfile> {
                           Row(
                             children: <Widget>[
                               Container(
-                                decoration: boxDecoration(bgColor: appStore.isDarkModeOn ? black : white, radius: 8, showShadow: true),
+                                decoration: boxDecoration(
+                                    bgColor:
+                                        appStore.isDarkModeOn ? black : white,
+                                    radius: 8,
+                                    showShadow: true),
                                 width: 40,
                                 height: 40,
                                 padding: EdgeInsets.all(10),
-                                child: Image.asset('images/ic_theme.png', color: appColorPrimary),
+                                child: Image.asset('images/ic_theme.png',
+                                    color: appColorPrimary),
                               ),
                               16.width,
-                              text('DarkMode', textColor: learner_textColorPrimary, fontSize: textSizeLargeMedium, fontFamily: fontSemibold),
+                              text('DarkMode',
+                                  textColor: learner_textColorPrimary,
+                                  fontSize: textSizeLargeMedium,
+                                  fontFamily: fontSemibold),
                             ],
                           ),
                           Switch(
@@ -155,14 +188,20 @@ Widget learnerOption(var icon, var heading) {
         Row(
           children: <Widget>[
             Container(
-              decoration: boxDecoration(bgColor: appStore.isDarkModeOn ? black : white, radius: 8, showShadow: true),
+              decoration: boxDecoration(
+                  bgColor: appStore.isDarkModeOn ? black : white,
+                  radius: 8,
+                  showShadow: true),
               width: 40,
               height: 40,
               padding: EdgeInsets.all(10),
               child: SvgPicture.asset(icon),
             ),
             16.width,
-            text(heading, textColor: learner_textColorPrimary, fontSize: textSizeLargeMedium, fontFamily: fontSemibold),
+            text(heading,
+                textColor: learner_textColorPrimary,
+                fontSize: textSizeLargeMedium,
+                fontFamily: fontSemibold),
           ],
         ),
         Icon(

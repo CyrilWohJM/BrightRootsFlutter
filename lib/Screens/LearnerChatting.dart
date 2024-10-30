@@ -26,7 +26,12 @@ class _LearnerChattingScreenState extends State<LearnerChattingScreen> {
             Container(
               alignment: Alignment.centerRight,
               width: MediaQuery.of(context).size.width * 0.45,
-              decoration: BoxDecoration(color: learner_colorPrimary, borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))),
+              decoration: BoxDecoration(
+                  color: learner_colorPrimary,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      topLeft: Radius.circular(10),
+                      bottomLeft: Radius.circular(10))),
               child: Text(
                 message.message,
                 style: primaryTextStyle(color: white),
@@ -38,9 +43,15 @@ class _LearnerChattingScreenState extends State<LearnerChattingScreen> {
         return Row(
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(color: context.cardColor, borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10), topLeft: Radius.circular(10))),
+              decoration: BoxDecoration(
+                  color: context.cardColor,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                      topLeft: Radius.circular(10))),
               width: MediaQuery.of(context).size.width * 0.75,
-              child: Text(message.message, style: primaryTextStyle()).paddingAll(8),
+              child: Text(message.message, style: primaryTextStyle())
+                  .paddingAll(8),
             ).paddingOnly(left: 16, right: 16, bottom: 16),
           ],
         );
@@ -68,7 +79,8 @@ class _LearnerChattingScreenState extends State<LearnerChattingScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         IconButton(
-                          icon: Icon(Icons.arrow_back, color: learner_colorPrimary),
+                          icon: Icon(Icons.arrow_back,
+                              color: learner_colorPrimary),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -76,11 +88,19 @@ class _LearnerChattingScreenState extends State<LearnerChattingScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            text("Marc Elliot", textColor: learner_textColorPrimary, fontSize: textSizeLargeMedium, fontFamily: fontMedium),
-                            text("Active", textColor: learner_textColorSecondary, fontSize: textSizeMedium, fontFamily: fontRegular)
+                            text("Captain America",
+                                textColor: learner_textColorPrimary,
+                                fontSize: textSizeLargeMedium,
+                                fontFamily: fontMedium),
+                            text("Active",
+                                textColor: learner_textColorSecondary,
+                                fontSize: textSizeMedium,
+                                fontFamily: fontRegular)
                           ],
                         ),
-                        Image.network(learner_ic_profile4, height: 45, width: 45, fit: BoxFit.fill).cornerRadiusWithClipRRect(25),
+                        Image.network(learner_ic_profile4,
+                                height: 45, width: 45, fit: BoxFit.fill)
+                            .cornerRadiusWithClipRRect(25),
                       ],
                     ),
                   ),
@@ -122,16 +142,19 @@ class _LearnerChattingScreenState extends State<LearnerChattingScreen> {
                         fillColor: context.cardColor,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(40),
-                          borderSide: BorderSide(color: learner_white, width: 0.0),
+                          borderSide:
+                              BorderSide(color: learner_white, width: 0.0),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(40),
-                          borderSide: BorderSide(color: learner_white, width: 0.0),
+                          borderSide:
+                              BorderSide(color: learner_white, width: 0.0),
                         ),
                       ),
                     ).expand(),
                     Container(
-                      child: Icon(Icons.arrow_upward, size: 24, color: learner_white),
+                      child: Icon(Icons.arrow_upward,
+                          size: 24, color: learner_white),
                       padding: EdgeInsets.all(10),
                       margin: EdgeInsets.only(right: 8, left: 8),
                       decoration: BoxDecoration(

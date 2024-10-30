@@ -40,6 +40,7 @@ const learner_ic_smile = "images/learner/learner_ic_smile.png";
 const learner_ic_upload = "images/learner/learner_ic_upload.png";
 
 const set_probability_note = "images/learner/set_probability.png";
+const profile_1 = "images/learner/profile_1.png";
 
 const Learner_ic_chart_navigation =
     "images/learner/learner_ic_chart_navigation.svg";

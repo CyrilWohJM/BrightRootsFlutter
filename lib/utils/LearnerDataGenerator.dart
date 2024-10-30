@@ -43,7 +43,7 @@ List<LearnerFeaturedModel> learnerGetFavourites() {
   LearnerFeaturedModel featured = LearnerFeaturedModel();
   featured.img = learner_walk_1;
   featured.name = "Set Operation & Probability";
-  featured.price = "\$19.99";
+  featured.price = "Free";
   featured.type = "Maths";
 
   LearnerFeaturedModel featured2 = LearnerFeaturedModel();
@@ -98,16 +98,16 @@ List<LearnerPeopleModel> learnerGetInstructor() {
 
   LearnerPeopleModel people = LearnerPeopleModel();
   people.img = learner_ic_profile2;
-  people.name = "James";
-  people.subject = "Economy";
+  people.name = "Dynamic Duo";
+  people.subject = "Mathematics";
   people.isOnline = true;
 
   list.add(people);
 
   LearnerPeopleModel people2 = LearnerPeopleModel();
   people2.img = learner_ic_profile3;
-  people2.name = "Anna";
-  people2.subject = "Design";
+  people2.name = "Tony Stank";
+  people2.subject = "Science";
   list.add(people2);
 
   LearnerPeopleModel people3 = LearnerPeopleModel();
@@ -116,13 +116,13 @@ List<LearnerPeopleModel> learnerGetInstructor() {
   people3.subject = "Photography";
   people3.isOnline = true;
 
-  list.add(people3);
+  //list.add(people3);
 
   LearnerPeopleModel people4 = LearnerPeopleModel();
   people4.img = learner_ic_profile5;
   people4.name = "Walter";
   people4.subject = "Artist";
-  list.add(people4);
+  //list.add(people4);
 
   LearnerPeopleModel people5 = LearnerPeopleModel();
   people5.img = learner_ic_profile6;
@@ -130,7 +130,7 @@ List<LearnerPeopleModel> learnerGetInstructor() {
   people5.subject = "Mathematician";
   people5.isOnline = true;
 
-  list.add(people5);
+  //list.add(people5);
 
   LearnerPeopleModel people6 = LearnerPeopleModel();
   people6.img = learner_ic_profile7;
@@ -138,7 +138,7 @@ List<LearnerPeopleModel> learnerGetInstructor() {
   people6.subject = "Sports";
   people6.isOnline = true;
 
-  list.add(people6);
+  //list.add(people6);
 
   return list;
 }
@@ -182,10 +182,10 @@ List<LearnerPeopleModel> learnerGetPending() {
 
   LearnerPeopleModel people = LearnerPeopleModel();
   people.img = learner_ic_Profile;
-  people.name = "Alice Smith";
+  people.name = "Point Break";
   people.isOnline = true;
   people.points = "109565 Points";
-  people.email = "alicesmith@gmail.com";
+  people.email = "pointbreak@gmail.com";
   people.frd = "12 mutual Friends";
   list.add(people);
 
@@ -195,7 +195,7 @@ List<LearnerPeopleModel> learnerGetPending() {
   people2.points = "206598 Points";
   people2.email = "hennahTran@gmail.com";
   people2.frd = "3 mutual Friends";
-  list.add(people2);
+  //list.add(people2);
 
   LearnerPeopleModel people3 = LearnerPeopleModel();
   people3.img = learner_ic_profile2;
@@ -203,7 +203,7 @@ List<LearnerPeopleModel> learnerGetPending() {
   people3.points = "896531 Points";
   people3.email = "Louisamacgee@gmail.com";
   people3.frd = "7 mutual Friends";
-  list.add(people3);
+  //list.add(people3);
 
   LearnerPeopleModel people4 = LearnerPeopleModel();
   people4.img = learner_ic_profile3;
@@ -212,7 +212,7 @@ List<LearnerPeopleModel> learnerGetPending() {
   people4.email = "WalterJames@gmail.com";
   people4.frd = "6 mutual Friends";
   people4.isOnline = true;
-  list.add(people4);
+  //list.add(people4);
 
   LearnerPeopleModel people5 = LearnerPeopleModel();
   people5.img = learner_ic_profile4;
@@ -220,7 +220,7 @@ List<LearnerPeopleModel> learnerGetPending() {
   people5.points = "236585 Points";
   people5.email = "niaScott@gmail.com";
   people5.frd = "16 mutual Friends";
-  list.add(people5);
+  //list.add(people5);
 
   LearnerPeopleModel people6 = LearnerPeopleModel();
   people6.img = learner_ic_profile5;
@@ -228,7 +228,7 @@ List<LearnerPeopleModel> learnerGetPending() {
   people6.points = "569432 Points";
   people6.email = "hennahTran@gmail.com";
   people6.frd = "12 mutual Friends";
-  list.add(people6);
+  //list.add(people6);
   return list;
 }
 
@@ -287,8 +287,8 @@ List<LearnerContentModel> learnerGetContents() {
 List<LearnerChatModel> learnerGetChatData() {
   List<LearnerChatModel> list = [];
   var content1 = LearnerChatModel();
-  content1.name = "Alice Smith";
-  content1.msg = "Hi Alice How are you";
+  content1.name = "Tony Stank";
+  content1.msg = "Hi Tony How are you";
   content1.img = learner_ic_profile3;
   content1.isOnline = true;
   list.add(content1);
@@ -297,20 +297,20 @@ List<LearnerChatModel> learnerGetChatData() {
   content2.name = "Hennah Tran";
   content2.msg = "Hi can u explain me this topic?";
   content2.img = learner_ic_profile4;
-  list.add(content2);
+  //list.add(content2);
 
   var content3 = LearnerChatModel();
   content3.name = "Hennah Tran";
   content3.msg = "Hi can u explain me this topic?";
   content3.img = learner_ic_profile6;
-  list.add(content3);
+  //list.add(content3);
 
   var content4 = LearnerChatModel();
   content4.name = "Hennah Tran";
   content4.msg = "Hi can u explain me this topic?";
   content4.img = learner_ic_profile2;
   content4.isOnline = true;
-  list.add(content4);
+  //list.add(content4);
 
   return list;
 }
@@ -344,12 +344,11 @@ List<LearnerLectureModel> learnerGetLectureData() {
 List<ChatModel> getMessages() {
   List<ChatModel> list = [];
 
-  ChatModel model1 = ChatModel('1', 'Hello Nimisha');
+  ChatModel model1 = ChatModel('1', 'Hello Dynamic Duo');
   ChatModel model2 = ChatModel(
       '1', 'I am Revision Bot, here to help you study your ongoing courses.');
-  ChatModel model3 = ChatModel('1',
-      'select a course to begin Set Operation & Probability Cloud Computing Moden Medicine');
-  ChatModel model4 = ChatModel('2', 'Modren Medicine');
+  ChatModel model3 = ChatModel('1', 'Select a course to begin with');
+  ChatModel model4 = ChatModel('2', 'Set Operation & Probability');
 
   list.add(model1);
   list.add(model2);

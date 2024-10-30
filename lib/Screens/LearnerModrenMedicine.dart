@@ -60,14 +60,30 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
               ).center(),
             ],
           ),
-          text(learner_lbl_Introducation, textColor: learner_textColorPrimary, fontSize: textSizeMedium, fontFamily: fontMedium).paddingOnly(top: 16).center(),
-          text(learner_lbl_Article, textColor: learner_textColorSecondary, fontSize: textSizeMedium, fontFamily: fontMedium).paddingOnly(bottom: 16),
-          text(learner_sample_long_text, textColor: learner_textColorSecondary, fontFamily: fontSemibold, maxLine: 5, isCentered: true).paddingOnly(left: 8, right: 8),
+          text(learner_lbl_Introducation,
+                  textColor: learner_textColorPrimary,
+                  fontSize: textSizeMedium,
+                  fontFamily: fontMedium)
+              .paddingOnly(top: 16)
+              .center(),
+          text(learner_lbl_Article,
+                  textColor: learner_textColorSecondary,
+                  fontSize: textSizeMedium,
+                  fontFamily: fontMedium)
+              .paddingOnly(bottom: 16),
+          text(learner_sample_long_text,
+                  textColor: learner_textColorSecondary,
+                  fontFamily: fontSemibold,
+                  maxLine: 5,
+                  isCentered: true)
+              .paddingOnly(left: 8, right: 8),
           SizedBox(height: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              elevation: 4, backgroundColor: learner_colorPrimary,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
+              elevation: 4,
+              backgroundColor: learner_colorPrimary,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
               padding: EdgeInsets.all(0.0),
             ),
             onPressed: () {},
@@ -93,7 +109,8 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
     );
 
     final learnerReview = Container(
-      decoration: boxDecoration(showShadow: true, bgColor: learner_white, radius: 10.0),
+      decoration:
+          boxDecoration(showShadow: true, bgColor: learner_white, radius: 10.0),
       margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
       padding: EdgeInsets.all(10.0),
       child: Column(
@@ -120,10 +137,13 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      text("Nimasha Perara", fontFamily: fontBold, textColor: learner_textColorPrimary),
+                      text("Dynamic Duo",
+                          fontFamily: fontBold,
+                          textColor: learner_textColorPrimary),
                     ],
                   ),
-                  text(learner_lbl_Student, textColor: learner_textColorPrimary),
+                  text(learner_lbl_Student,
+                      textColor: learner_textColorPrimary),
                 ],
               ),
             ],
@@ -144,7 +164,12 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
               print(rating);
             },
           ),
-          text(learner_sample_long_text, textColor: learner_textColorSecondary, fontSize: textSizeMedium, fontFamily: fontMedium, maxLine: 5).paddingOnly(bottom: 16)
+          text(learner_sample_long_text,
+                  textColor: learner_textColorSecondary,
+                  fontSize: textSizeMedium,
+                  fontFamily: fontMedium,
+                  maxLine: 5)
+              .paddingOnly(bottom: 16)
         ],
       ),
     );
@@ -165,17 +190,25 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                 child: Stack(
                   alignment: Alignment.topRight,
                   children: <Widget>[
-                    CircleAvatar(backgroundImage: CachedNetworkImageProvider(mList1[index].img), radius: 50),
+                    CircleAvatar(
+                        backgroundImage:
+                            CachedNetworkImageProvider(mList1[index].img),
+                        radius: 50),
                     Container(
                       height: 15,
                       width: 15,
-                      color: mList1[index].isOnline ? learner_green : learner_greyColor.withOpacity(1.0),
+                      color: mList1[index].isOnline
+                          ? learner_green
+                          : learner_greyColor.withOpacity(1.0),
                     ).cornerRadiusWithClipRRect(7).paddingOnly(top: 4, right: 4)
                   ],
                 ),
               ),
               SizedBox(height: 8),
-              text(mList1[index].name, fontSize: textSizeLargeMedium, fontFamily: fontBold, textColor: learner_textColorPrimary),
+              text(mList1[index].name,
+                  fontSize: textSizeLargeMedium,
+                  fontFamily: fontBold,
+                  textColor: learner_textColorPrimary),
             ],
           ),
         );
@@ -199,14 +232,20 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    text(mList2[index].no, textColor: learner_textColorPrimary, fontSize: textSizeLarge, fontFamily: fontSemibold).paddingOnly(left: 16, top: 8),
+                    text(mList2[index].no,
+                            textColor: learner_textColorPrimary,
+                            fontSize: textSizeLarge,
+                            fontFamily: fontSemibold)
+                        .paddingOnly(left: 16, top: 8),
                     text(
                       mList2[index].title,
                       textColor: learner_textColorPrimary,
                       fontSize: textSizeNormal,
                       fontFamily: fontSemibold,
                       maxLine: 2,
-                    ).paddingOnly(left: 16, top: 8, right: 16, bottom: 8).expand(),
+                    )
+                        .paddingOnly(left: 16, top: 8, right: 16, bottom: 8)
+                        .expand(),
                   ],
                 ),
                 Row(
@@ -222,7 +261,12 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                 Row(
                   children: <Widget>[
                     SizedBox(width: 24),
-                    text(mList2[index].type, textColor: learner_textColorSecondary, fontSize: textSizeLargeMedium, fontFamily: fontSemibold, maxLine: 2).paddingOnly(left: 16, right: 16),
+                    text(mList2[index].type,
+                            textColor: learner_textColorSecondary,
+                            fontSize: textSizeLargeMedium,
+                            fontFamily: fontSemibold,
+                            maxLine: 2)
+                        .paddingOnly(left: 16, right: 16),
                   ],
                 )
               ],
@@ -241,7 +285,11 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                text("5.0", textColor: learner_yellow, fontSize: textSizeLarge, fontFamily: fontBold).paddingOnly(right: 8),
+                text("5.0",
+                        textColor: learner_yellow,
+                        fontSize: textSizeLarge,
+                        fontFamily: fontBold)
+                    .paddingOnly(right: 8),
                 RatingBar(
                   initialRating: 5,
                   minRating: 5,
@@ -259,9 +307,20 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                 ).center(),
               ],
             ).paddingOnly(left: 16, top: 16, right: 16),
-            text(learner_lbl_2K_Student, textColor: learner_textColorPrimary, fontSize: textSizeMedium, fontFamily: fontBold).paddingOnly(top: 16, left: 16, bottom: 16),
-            Container(height: 120, width: MediaQuery.of(context).size.width, child: learnerStudent),
-            text(learner_36_Lectures, textColor: learner_textColorPrimary, fontSize: textSizeMedium, fontFamily: fontBold).paddingOnly(top: 16, left: 16, bottom: 16),
+            text(learner_lbl_2K_Student,
+                    textColor: learner_textColorPrimary,
+                    fontSize: textSizeMedium,
+                    fontFamily: fontBold)
+                .paddingOnly(top: 16, left: 16, bottom: 16),
+            Container(
+                height: 120,
+                width: MediaQuery.of(context).size.width,
+                child: learnerStudent),
+            text(learner_36_Lectures,
+                    textColor: learner_textColorPrimary,
+                    fontSize: textSizeMedium,
+                    fontFamily: fontBold)
+                .paddingOnly(top: 16, left: 16, bottom: 16),
             Container(child: learnerLecture.paddingOnly(right: 16)),
             SizedBox(height: 16)
           ],
@@ -315,17 +374,26 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                             ],
                           ),
                         ),
-                        text(learner_lbl_modren_medicine, fontSize: textSizeXXLarge, fontFamily: fontBold, textColor: learner_textColorPrimary),
+                        text(learner_lbl_modren_medicine,
+                            fontSize: textSizeXXLarge,
+                            fontFamily: fontBold,
+                            textColor: learner_textColorPrimary),
                         Row(
                           children: <Widget>[
                             CachedNetworkImage(
-                              placeholder: placeholderWidgetFn() as Widget Function(BuildContext, String)?,
+                              placeholder: placeholderWidgetFn() as Widget
+                                  Function(BuildContext, String)?,
                               imageUrl: learner_ic_Profile,
                               height: 30,
                               width: 30,
                               fit: BoxFit.fill,
                             ).cornerRadiusWithClipRRect(15).paddingOnly(top: 8),
-                            text(learner_lbl_Louisa_macGee, textColor: learner_textColorPrimary, fontSize: textSizeMedium, fontFamily: fontSemibold).paddingOnly(left: 8).center(),
+                            text(learner_lbl_Louisa_macGee,
+                                    textColor: learner_textColorPrimary,
+                                    fontSize: textSizeMedium,
+                                    fontFamily: fontSemibold)
+                                .paddingOnly(left: 8)
+                                .center(),
                           ],
                         ),
                         SizedBox(
@@ -346,21 +414,24 @@ class _LearnerModrenMedicineState extends State<LearnerModrenMedicine> {
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   learner_lbl_Lessons,
-                                  style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontFamily: fontBold),
                                 ),
                               ),
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   learner_lbl_Reviews,
-                                  style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontFamily: fontBold),
                                 ),
                               ),
                               Container(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   learner_lbl_About,
-                                  style: TextStyle(fontSize: 18.0, fontFamily: fontBold),
+                                  style: TextStyle(
+                                      fontSize: 18.0, fontFamily: fontBold),
                                 ),
                               ),
                             ],
